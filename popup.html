@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Safe Browsing</title>
+
+
+  <style>
+    /* Modal Structure */
+  </style>
+  <script src="content.js"></script>
+</head>
+
+<body>
+  <h1>Browser based vulnerabilities and corresponding Firefox configuration properties, values</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Vulnerability</th>
+        <th>Firefox Configuration Property</th>
+        <th>Possible Property Values and Their Meanings</th>
+        <th>Default Value</th>
+        <th>Recommended Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cross site scripting</td>
+        <td>network.cookie.cookieBehavior</td>
+        <td>0 All (first & third
+          party) cookies are
+          allowed
+          <hr />
+          1 Only first party
+          cookies allowed
+          (block third party
+          cookies)
+          <hr />
+          2 All cookies are
+          blocked
+          <hr />
+          3 Cookies are allowed
+          based on the cookie
+          P3P policy</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Cross Site Request Forgery</td>
+        <td>security.fileuri.strict_origin_policy</td>
+        <td>T Enable strict origin policy
+          <hr />
+          F Disable strict origin policy</td>
+        <td>T</td>
+        <td>T</td>
+      </tr>
+      <tr>
+        <td>SSL / TLS</td>
+        <td>security.tls.version.max</td>
+        <td>0 SSL / TLS using
+          SSL3.0
+          <hr />
+          1 SSL / TLS using
+          TLS 1.0
+          <hr />
+          2 SSL / TLS using
+          TLS 1.1
+          <hr />
+          3 SSL / TLS using
+          TLS 1.2
+          <hr />
+          4 SSL / TLS using
+          TLS 1.3
+          <hr />
+          If max version Set below 4, Chance of SSl/TLS based attack
+        </td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>SSL / TLS</td>
+        <td>security.tls.version.fallback-limit</td>
+        <td>0 SSL / TLS using
+          SSL3.0
+          <hr />
+          1 SSL / TLS using
+          TLS 1.0
+          <hr />
+          2 SSL / TLS using
+          TLS 1.1
+          <hr />
+          3 SSL / TLS using
+          TLS 1.2
+          <hr />
+          4 SSL / TLS using
+          TLS 1.3
+          <hr />
+          If fallback Set below 4, Chance of SSl/TLS based attack
+        </td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Information Leak</td>
+        <td>browser.formfill.enable</td>
+        <td>T User input text in web
+          page form fields and
+          browser’s search bar
+          is saved
+          <hr />
+          F Web page form and
+          search bar data is not
+          saved</td>
+        <td>T</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>WebGL</td>
+        <td>webgl.disabled</td>
+        <td>T Disable WebGL
+          <hr />
+          F Enable WebGL</td>
+        <td>F</td>
+        <td>T</td>
+      </tr>
+    </tbody>
+
+  </table>
+</body>
+
+</html>

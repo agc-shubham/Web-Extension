@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Safe Browsing",
+  "description": "Web Extension to Mitigate Browser Side attacks",
+  "version": "1.0.0",
+ 
+  "content-script":[{
+    "matches":["<all-urls>"],
+    "js":["content.js"]
+  }],
+  "browser_action": {
+    "default_icon": "computer.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}
